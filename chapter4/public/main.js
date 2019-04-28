@@ -1,9 +1,9 @@
-mapboxgl.accessToken = 'pk.eyJ1Ijoid2l0eXZpcyIsImEiOiJjajl4MGo0OWowczk4MnFtZHVob3I0MTdnIn0.KHhjbfQIuxBcoOsukPTldQ';
+mapboxgl.accessToken = 'pk.eyJ1IjoibmloZTA3NjAiLCJhIjoiY2p1bzhmOWI1MnJsODQxb2FnaTdmb3J0NyJ9.pPdj9B-Ql2FTGrqZsbceEg';
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/dark-v9',
     center: [0, 0],
-    maxBounds: [[-180, -85], [180, 85]],
+    //maxBounds: [[-180, -85], [180, 85]],
     zoom: 1
 });
 
@@ -23,6 +23,7 @@ map.on('load', function () {
 
                 for (var prop in details) {
                     resultingDOM += "<span class='title'>" + prop.toUpperCase() + "</span>" + " " + details[prop] + "</br>";
+                    console.log(data);
                 }
 
                 document.getElementById('details').innerHTML = resultingDOM;
